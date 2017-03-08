@@ -1,6 +1,12 @@
 language: objective-c
 osx_image: xcode8.2
 rvm:
-  - 2.2
+- 2.2
 script:
-  - Tools/ci-travis.rb
+- Tools/ci-travis.rb
+deploy:
+  provider: releases
+  api_key:
+    secure: N4O8H/kuSEYA99aiMJ0LED8d2IquJOVzitA/NVxj/GcPuBhMA3WrcN5wDDHyFNFKvpsgtrwnqExDhxS31HBt+AVt5YbqbR1wsrND5TW3xWWTrcHExyz4FU6JaGBJPb3DzVmNP83C0kNI3hm4ZYzwY8dg+82OogEe+0+QEnEwWo8SzDW9rHPjsLLzacywefmyO7P7A+2OV8nR0PQ1o337o1XpFIDSEp5riA8Mo70hMK+JsZP3lyn8T8Mn2JRsIWiYMYmBbPoUqFMoyAXdUfBuvT2XtMZaldMVpLcL33VXczOzJbiLHVjPYXGcXoVbqK6QCw9swiFONPvNsU/hz2U4NM78i7MyG73Rrdl0n79q98ky5lmEz6LGFoshIm9FjvGYq7P+7qGRpTUBF0+6hjzd+CT0sEqtPJEhxarw9mH92HhgpdfFs6v3luhchkhXgx2kuKxe3swnmp3MwQpFVNHp5gWkhrS2MbhX/ri0qnieU3RzP+CN3+z4pxloAMqVXaR35Se4aCixLL+I7/fqVItCo8X/B8Ok58fyzGrJ6L2VY0N2ek+Kd5mWlOO2R//+fDMUSqMyUGDeFeEqJxqKIJ2yhi4Im2chucJd8aYDUQfMwAVKS0z43E9aMkK4ZjgG841nZSASnIN0xHgxjTO+p4SW4Bca75ORtNIr6IzLyfQWdfQ=
+  file_glob: true
+  file: Release/*
