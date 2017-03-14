@@ -12,3 +12,4 @@ deploy:
   file: Release/*
   on:
     tags: true
+    repo: omochi/numsw
